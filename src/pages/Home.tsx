@@ -1,26 +1,20 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import React from "react";
+import { IonContent, IonHeader, IonNavLink, IonPage, IonTitle, IonToolbar } from "@ionic/react";
 
-const Home: React.FC = () => {
+export const HomePage: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader collapse="fade">
         <IonToolbar>
-          <IonTitle>My Ionic App</IonTitle>
+          <IonTitle>Accueil</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <p>Hello world</p>
-        <ExploreContainer />
+      <IonContent className="ion-padding">
+        <ul>
+          <IonNavLink href="/register">Créer un compte</IonNavLink>
+          <IonNavLink href="/login">Connexion</IonNavLink>
+        </ul>
       </IonContent>
     </IonPage>
   );
 };
-
-export default Home;

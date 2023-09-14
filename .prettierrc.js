@@ -1,0 +1,33 @@
+module.exports = {
+  plugins: ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  endOfLine: "lf",
+  tabWidth: 2,
+  printWidth: 100,
+  semi: true,
+  trailingComma: "none",
+  singleQuote: false,
+  tailwindFunctions: ["cn", "cva", "clsx", "twMerge"],
+  importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
+  importOrder: [
+    "<TYPES>",
+    "<TYPES>^[~]",
+    "<TYPES>^[.]",
+    "",
+    "<BUILTIN_MODULES>",
+    "^(react/(.*)$)|^(react$)",
+    "^(vite/(.*)$)|^(vite$)",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^(~/config/(.*)$)|^(~/config$)",
+    "^(~/utils/(.*)$)|^(~/utils$)",
+    "^(~/hooks/(.*)$)|^(~/hooks$)",
+    "^(~/pages/(.*)$)|^(~/pages$)",
+    "^(~/components/(.*)$)|^(~/components$)",
+    "^(~/components/ui/(.*)$)|^(~/components/ui$)",
+    "^(~/assets/(.*)$)|^(~/assets$)",
+    "^(~/styles/(.*)$)|^(~/styles$)",
+    "^(~/(.*)$)|^(~$)",
+    "^(./(.*)$)|^(.$)",
+    "^[.]"
+  ]
+};
